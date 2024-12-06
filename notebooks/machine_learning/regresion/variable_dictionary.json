@@ -1,0 +1,98 @@
+{
+    "id": {
+        "description": "id",
+        "type": "categorical"
+    },
+    "url": {
+        "description": "url",
+        "type": "categorical"
+    },
+    "region": {
+        "description": "region",
+        "type": "categorical"
+    },
+    "region_url": {
+        "description": "region_url",
+        "type": "categorical"
+    },
+    "price": {
+        "description": "price",
+        "type": "numeric"
+    },
+    "year": {
+        "description": "year",
+        "type": "date"
+    },
+    "manufacturer": {
+        "description": "manufacturer",
+        "type": "categorical"
+    },
+    "model": {
+        "description": "model",
+        "type": "categorical"
+    },
+    "condition": {
+        "description": "condition",
+        "type": "categorical"
+    },
+    "cylinders": {
+        "description": "cylinders",
+        "type": "categorical"
+    },
+    "fuel": {
+        "description": "fuel",
+        "type": "categorical"
+    },
+    "odometer": {
+        "description": "odometer",
+        "type": "numeric"
+    },
+    "title_status": {
+        "description": "title_status",
+        "type": "categorical"
+    },
+    "transmission": {
+        "description": "transmission",
+        "type": "categorical"
+    },
+    "VIN": {
+        "description": "VIN",
+        "type": "categorical"
+    },
+    "drive": {
+        "description": "drive",
+        "type": "categorical"
+    },
+    "type": {
+        "description": "type",
+        "type": "categorical"
+    },
+    "paint_color": {
+        "description": "paint_color",
+        "type": "categorical"
+    },
+    "image_url": {
+        "description": "image_url",
+        "type": "categorical"
+    },
+    "description": {
+        "description": "description",
+        "type": "categorical"
+    },
+    "state": {
+        "description": "state",
+        "type": "categorical"
+    },
+    "lat": {
+        "description": "lat",
+        "type": "categorical"
+    },
+    "long": {
+        "description": "long",
+        "type": "categorical"
+    },
+    "posting_date": {
+        "description": "posting_date",
+        "type": "date"
+    }
+}

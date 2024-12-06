@@ -26,13 +26,34 @@ def calculate_na_statistics(df: pd.DataFrame) -> pd.DataFrame:
     na = pd.DataFrame(data=aux)
     return na.sort_values(by='Na en %', ascending=False)
 
-# Function to detect outliers using IQR
-def detect_outliers_iqr(data):
-    Q1 = data.quantile(0.25)
-    Q3 = data.quantile(0.75)
-    IQR = Q3 - Q1
-    # Define bounds
-    lower_bound = Q1 - 1.5 * IQR
-    upper_bound = Q3 + 1.5 * IQR
-    # Return True for outliers
-    return (data < lower_bound) | (data > upper_bound)
+def detect_outliers_iqr(df):
+    """
+    Detecta valores atípicos en las columnas numéricas de un DataFrame usando el método IQR.
+
+    Args:
+        df (pd.DataFrame): DataFrame a analizar.
+
+    Returns:
+        dict: Diccionario con el nombre de las columnas como claves y las filas con valores atípicos como valores.
+    """
+    # Seleccionar solo columnas numéricas
+    numeric_columns = df.select_dtypes(include=['int64', 'float64']).columns
+    if numeric_columns.empty:
+        raise ValueError("El DataFrame no contiene columnas numéricas.")
+
+    outliers = {}
+    
+    # Iterar sobre las columnas numéricas
+    for column in numeric_columns:
+        Q1 = df[column].quantile(0.25)
+        Q3 = df[column].quantile(0.75)
+        IQR = Q3 - Q1
+        lower_bound = Q1 - 1.5 * IQR
+        upper_bound = Q3 + 1.5 * IQR
+        print(f"Columna: {column}, Límite inferior: {lower_bound}, Límite superior: {upper_bound}")
+        
+        # Filtrar las filas que contienen valores atípicos
+        outlier_rows = df[(df[column] < lower_bound) | (df[column] > upper_bound)]
+        outliers[column] = outlier_rows
+
+    return outliers
