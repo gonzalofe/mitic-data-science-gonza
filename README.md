@@ -132,6 +132,7 @@ Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
 ```bash
 pip install -r requirements.txt
+```
 Clonar y Ejecutar el Proyecto
 Clonar el repositorio:
 ```bash
@@ -144,9 +145,9 @@ Abrir y ejecutar el notebook:
 Copiar código
 jupyter notebook notebooks/machine_learning/regresion/clasificacion_basica.ipynb
 ```
-Ejecutar las celdas paso a paso
-Cargar los datos desde los archivos CSV.
-Preprocesar las características y dividir en entrenamiento/prueba.
-Entrenar modelos de clasificación (Logistic Regression, KNN y Random Forest).
-Evaluar los modelos con métricas clave (Accuracy, Recall, Precision, F1-Score).
-Visualizar resultados como matriz de confusión y curva ROC.
+- Ejecutar las celdas paso a paso
+ Cargar los datos desde los archivos CSV.
+- Preprocesar las características y dividir en entrenamiento/prueba.
+- Entrenar modelos de clasificación (Logistic Regression, KNN y Random Forest).
+- Evaluar los modelos con métricas clave (Accuracy, Recall, Precision, F1-Score).
+- Visualizar resultados como matriz de confusión y curva ROC.
