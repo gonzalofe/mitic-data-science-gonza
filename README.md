@@ -107,3 +107,44 @@ Abrir y ejecutar el notebook:
 ```bash
 jupyter notebook notebooks/machine_learning/regresion/clasificacion_basica.ipynb
 ```
+
+Entendido, eso sucede porque en Markdown, una sección de texto encerrada en triple tilde inicia un bloque de código o texto plano y continúa con ese formato hasta que se cierra con otro bloque de **tildes triples**.
+
+Si deseas corregirlo, asegúrate de cerrar el bloque de código cuando sea necesario y continuar el texto fuera de él. Aquí está la versión ajustada:
+
+Corrección del Markdown
+markdown
+Copiar código
+---
+
+## 🚀 **Ejecución del Proyecto**
+
+### **Requisitos Previos**
+- Python **3.8** o superior.
+- Librerías necesarias:  
+  `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`.
+
+---
+
+### **Instalación de Dependencias**
+
+Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
+
+```bash
+pip install -r requirements.txt
+Clonar y Ejecutar el Proyecto
+Clonar el repositorio:
+bash
+Copiar código
+git clone https://github.com/gonzalofe/mitic-data-science-gonza.git
+cd mitic-data-science-gonza
+Abrir y ejecutar el notebook:
+bash
+Copiar código
+jupyter notebook notebooks/machine_learning/regresion/clasificacion_basica.ipynb
+Ejecutar las celdas paso a paso
+Cargar los datos desde los archivos CSV.
+Preprocesar las características y dividir en entrenamiento/prueba.
+Entrenar modelos de clasificación (Logistic Regression, KNN y Random Forest).
+Evaluar los modelos con métricas clave (Accuracy, Recall, Precision, F1-Score).
+Visualizar resultados como matriz de confusión y curva ROC.
