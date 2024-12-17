@@ -136,13 +136,11 @@ pip install -r requirements.txt
 Clonar y Ejecutar el Proyecto
 Clonar el repositorio:
 ```bash
-Copiar código
 git clone https://github.com/gonzalofe/mitic-data-science-gonza.git
 cd mitic-data-science-gonza
 ```
 Abrir y ejecutar el notebook:
 ```bash
-Copiar código
 jupyter notebook notebooks/machine_learning/regresion/clasificacion_basica.ipynb
 ```
 - Ejecutar las celdas paso a paso
