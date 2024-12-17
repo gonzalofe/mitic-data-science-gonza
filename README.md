@@ -82,36 +82,29 @@ mitic-data-science-gonza/
 
 ---
 
-🚀 Ejecución del Proyecto
-Requisitos Previos
-Python 3.8 o superior.
-Librerías necesarias:
-pandas, numpy, matplotlib, seaborn, scikit-learn.
-Instalación de Dependencias
+
+## 🚀 **Ejecución del Proyecto**
+
+### **Requisitos Previos**
+- Python **3.8** o superior.
+- Librerías necesarias:  
+  `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`.
+
+---
+
+### **Instalación de Dependencias**
+
 Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
-bash
-Copiar código
+```bash
 pip install -r requirements.txt
+---
 Clonar y Ejecutar el Proyecto
 Clonar el repositorio:
-bash
-Copiar código
+```bash
 git clone https://github.com/gonzalofe/mitic-data-science-gonza.git
 cd mitic-data-science-gonza
+---
 Abrir y ejecutar el notebook:
-bash
-Copiar código
+```bash
 jupyter notebook notebooks/machine_learning/regresion/clasificacion_basica.ipynb
-Ejecutar las celdas paso a paso:
-Cargar los datos desde los archivos CSV.
-Preprocesar las características y dividir en entrenamiento/prueba.
-Entrenar modelos de clasificación (Logistic Regression, KNN y Random Forest).
-Evaluar los modelos con métricas clave (Accuracy, Recall, Precision, F1-Score).
-Visualizar resultados como matriz de confusión y curva ROC.
-📊 Resultados
-Las visualizaciones y resultados clave generados se almacenarán en la carpeta results/, incluidos:
-
-Matriz de Confusión: confusion_matrix.png
-Curva ROC: roc_curve.png
-Comparación de Accuracy: comparison_accuracy.png
