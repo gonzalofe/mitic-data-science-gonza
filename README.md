@@ -78,9 +78,7 @@ mitic-data-science-gonza/
 │
 ├── requirements.txt                          # Dependencias del proyecto
 └── README.md                                 # Documentación principal del proyecto
-
-
----
+```
 
 
 ## 🚀 **Ejecución del Proyecto**
@@ -98,13 +96,14 @@ Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
 ```bash
 pip install -r requirements.txt
----
+```
 Clonar y Ejecutar el Proyecto
 Clonar el repositorio:
 ```bash
 git clone https://github.com/gonzalofe/mitic-data-science-gonza.git
 cd mitic-data-science-gonza
----
+```
 Abrir y ejecutar el notebook:
 ```bash
 jupyter notebook notebooks/machine_learning/regresion/clasificacion_basica.ipynb
+```
