@@ -1,3 +1,4 @@
 /data/
+/cache/
 "/data/vehicles.csv"  git add .gitignore git commit -m "Ignorar vehicles.csv"
-"/data/vehicles.csv"  git add .gitignore git commit -m "A¤adir vehicles.csv a .gitignore"
+"/data/vehicles.csv"  git add .gitignore git commit -m "Aï¿½adir vehicles.csv a .gitignore"
