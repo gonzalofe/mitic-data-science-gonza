@@ -92,13 +92,14 @@ Consulta las visualizaciones clave en la sección de [Visualizaciones Clave](#vi
    ```bash
    git clone https://github.com/gonzalofe/mitic-data-science-gonza.git
    cd mitic-data-science-gonza/notebooks/machine_learning/Clasificación/Proyecto1
-```
+   ```
+
 2. Instalar las dependencias necesarias:
 
-    ```bash
-    conda activate mitic-data-science-setiembre-2024
-    pip install -r requirements.txt
-```
+   ```bash
+   conda activate mitic-data-science-setiembre-2024
+   pip install -r requirements.txt
+   ```
 Ejecutar el notebook:
 
 Abrir proyecto_1_parte_final.ipynb con Jupyter Notebook o Jupyter Lab.
@@ -106,5 +107,5 @@ Correr todas las celdas para reproducir el análisis.
 ## Créditos
 Este proyecto fue desarrollado por Gonzalo Ferreira como parte del curso de Ciencia de Datos en MITIC.
 
-# Licencia
+## Licencia
 Este proyecto está licenciado bajo los términos de la MIT License. Consulta el archivo LICENSE para más detalles.
