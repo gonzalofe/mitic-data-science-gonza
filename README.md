@@ -1,151 +1,110 @@
-# Clasificación Básica de Calidad del Vino
+# Proyecto 1: Clasificación en Machine Learning
 
-## 📋 Descripción del Proyecto
-Este proyecto tiene como objetivo **clasificar la calidad del vino** utilizando diferentes técnicas de clasificación supervisada. Los datos provienen de características físico-químicas de vinos tintos y blancos, y la calidad se ha dividido en **buena** y **mala** a partir de un umbral predefinido.
+Este repositorio contiene el trabajo realizado como parte del **Proyecto 1** del curso de Ciencia de Datos en MITIC. El objetivo principal fue aplicar técnicas de clasificación para analizar un conjunto de datos, generar modelos predictivos y evaluar su desempeño utilizando métricas clave.
 
-El código se encuentra implementado en un **notebook de Jupyter**, utilizando librerías comunes en **Python** como `scikit-learn`, `pandas`, y `matplotlib`.
-
----
-
-## ⚙️ Técnicas Implementadas
-
-### **1. Preprocesamiento de Datos**
-- Carga y exploración del dataset.
-- Clasificación binaria de la variable objetivo:
-  - **1**: Buena calidad (≥ 6 en la columna `quality`).
-  - **0**: Mala calidad.
-- Escalado de características numéricas mediante **StandardScaler**.
-
-### **2. Modelos Utilizados**
-Se implementaron los siguientes modelos de clasificación:
-- **Regresión Logística**.
-- **K-Nearest Neighbors (KNN)**.
-- **Random Forest Classifier** (Optimizado con GridSearchCV).
-
-### **3. Evaluación de Modelos**
-Las métricas utilizadas para evaluar los modelos incluyen:
-- **Accuracy**.
-- **Precision, Recall, y F1-Score**.
-- **Matriz de Confusión**.
-- **Curva ROC y AUC**.
-
-Se comparan los resultados para identificar el mejor modelo basado en rendimiento.
+## Tabla de Contenidos
+1. [Introducción](#introducción)
+2. [Objetivos](#objetivos)
+3. [Descripción del Conjunto de Datos](#descripción-del-conjunto-de-datos)
+4. [Estrategia de Análisis](#estrategia-de-análisis)
+5. [Resultados](#resultados)
+6. [Visualizaciones Clave](#visualizaciones-clave)
+7. [Conclusiones](#conclusiones)
+8. [Cómo Ejecutar el Proyecto](#cómo-ejecutar-el-proyecto)
 
 ---
 
-## 📊 Resultados Obtenidos
-Los resultados del análisis y los modelos entrenados mostraron lo siguiente:
-
-1. **Regresión Logística**
-   - Accuracy: **74.3%**
-   - Buen equilibrio entre precisión y recall.
-
-2. **KNN**
-   - Accuracy: **72.6%**
-   - Menor rendimiento general, especialmente para la clase **mala calidad**.
-
-3. **Random Forest Classifier**
-   - Accuracy: **75.4%**
-   - Mejor rendimiento general.
-   - AUC: **0.82**.
-   - **Random Forest** es seleccionado como el mejor modelo después de optimización con GridSearchCV.
-
-**Visualizaciones Generadas:**
-- **Comparación de modelos** (barras de accuracy).
-- **Matrices de Confusión**.
-- **Curvas ROC-AUC**.
+## Introducción
+En este proyecto, se implementaron y compararon diferentes modelos de clasificación utilizando bibliotecas como `scikit-learn`. Los modelos fueron evaluados con métricas de rendimiento estándar, como **Accuracy**, **Precision**, **Recall**, **F1-Score** y **ROC-AUC**, para seleccionar el mejor modelo basado en el desempeño general.
 
 ---
 
-## 📂 **Estructura del Proyecto**
-
-```plaintext
-mitic-data-science-gonza/
-│
-├── notebooks/
-│   ├── machine_learning/
-│   │   ├── regresion/
-│   │   │   ├── clasificacion_basica.ipynb    # Notebook principal del análisis
-│
-├── data/                                     # Datos utilizados en el proyecto (opcional)
-│   ├── winequality-red.csv                   # Datos de vino tinto
-│   ├── winequality-white.csv                 # Datos de vino blanco
-│
-├── results/                                  # Resultados y visualizaciones generadas
-│   ├── confusion_matrix.png                  # Visualización de matriz de confusión
-│   ├── roc_curve.png                         # Visualización de la curva ROC
-│   ├── comparison_accuracy.png               # Comparación de accuracy entre modelos
-│
-├── requirements.txt                          # Dependencias del proyecto
-└── README.md                                 # Documentación principal del proyecto
-```
-
-
-## 🚀 **Ejecución del Proyecto**
-
-### **Requisitos Previos**
-- Python **3.8** o superior.
-- Librerías necesarias:  
-  `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`.
+## Objetivos
+- Aplicar técnicas de preprocesamiento de datos, como codificación de variables categóricas y escalado.
+- Entrenar y evaluar múltiples modelos de clasificación.
+- Comparar los modelos utilizando métricas clave.
+- Identificar el modelo más adecuado y analizar sus características más importantes.
 
 ---
 
-### **Instalación de Dependencias**
+## Descripción del Conjunto de Datos
+El conjunto de datos contiene información sobre:
+- **Características categóricas**: Género, Categoría de Producto.
+- **Características numéricas**: Edad, Cantidad, Precio por Unidad.
+- **Objetivo**: Clasificar elementos en múltiples clases según el contexto del problema.
 
-Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
-
-```bash
-pip install -r requirements.txt
-```
-Clonar y Ejecutar el Proyecto
-Clonar el repositorio:
-```bash
-git clone https://github.com/gonzalofe/mitic-data-science-gonza.git
-cd mitic-data-science-gonza
-```
-Abrir y ejecutar el notebook:
-```bash
-jupyter notebook notebooks/machine_learning/regresion/clasificacion_basica.ipynb
-```
-
-Entendido, eso sucede porque en Markdown, una sección de texto encerrada en triple tilde inicia un bloque de código o texto plano y continúa con ese formato hasta que se cierra con otro bloque de **tildes triples**.
-
-Si deseas corregirlo, asegúrate de cerrar el bloque de código cuando sea necesario y continuar el texto fuera de él. Aquí está la versión ajustada:
-
-Corrección del Markdown
-markdown
-Copiar código
----
-
-## 🚀 **Ejecución del Proyecto**
-
-### **Requisitos Previos**
-- Python **3.8** o superior.
-- Librerías necesarias:  
-  `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`.
+El dataset fue dividido en un 80% para entrenamiento y un 20% para pruebas.
 
 ---
 
-### **Instalación de Dependencias**
+## Estrategia de Análisis
+1. **Preprocesamiento**:
+   - Codificación de variables categóricas mediante `OneHotEncoder`.
+   - Escalado de variables numéricas mediante `StandardScaler`.
 
-Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
+2. **Modelos Entrenados**:
+   - **Regresión Logística**
+   - **K-Nearest Neighbors**
+   - **Árbol de Decisión**
+   - **Random Forest**
 
-```bash
-pip install -r requirements.txt
+3. **Métricas Evaluadas**:
+   - **Accuracy**
+   - **Precision**
+   - **Recall**
+   - **F1-Score**
+   - **ROC-AUC**
+
+4. **Evaluación**:
+   - Se utilizaron curvas ROC para comparar el desempeño multiclase.
+   - Se analizaron las matrices de confusión para identificar errores comunes.
+
+---
+
+## Resultados
+- **Modelo con mejor desempeño**: Random Forest
+- **Métricas del mejor modelo**:
+  - **Accuracy**: 99.5%
+  - **ROC-AUC**: 100%
+  - **Precision**: 99.7%
+  - **Recall**: 99.2%
+
+Consulta las visualizaciones clave en la sección de [Visualizaciones Clave](#visualizaciones-clave).
+
+---
+
+## Visualizaciones Clave
+1. **Curvas ROC**: Comparación de los modelos evaluados.
+2. **Matriz de Confusión**: Desempeño del modelo Random Forest.
+3. **Importancia de Características**: Factores más relevantes para el modelo Random Forest.
+
+---
+
+## Conclusiones
+- El modelo **Random Forest** demostró ser el más robusto, obteniendo una precisión del 99.7% y un área bajo la curva ROC (AUC) del 100%.
+- La **Edad** y el **Precio por Unidad** fueron las características más importantes según el análisis de importancia de características.
+- El análisis resaltó la importancia de un preprocesamiento adecuado y una evaluación detallada de las métricas.
+
+---
+
+## Cómo Ejecutar el Proyecto
+1. Clonar este repositorio:
+   ```bash
+   git clone https://github.com/gonzalofe/mitic-data-science-gonza.git
+   cd mitic-data-science-gonza/notebooks/machine_learning/Clasificación/Proyecto1
 ```
-Clonar y Ejecutar el Proyecto
-Clonar el repositorio:
-```bash
-git clone https://github.com/gonzalofe/mitic-data-science-gonza.git
-cd mitic-data-science-gonza
+2. Instalar las dependencias necesarias:
+
+    ```bash
+    conda activate mitic-data-science-setiembre-2024
+    pip install -r requirements.txt
 ```
-Abrir y ejecutar el notebook:
-```bash
-jupyter notebook notebooks/machine_learning/regresion/clasificacion_basica.ipynb
-```
-- Ejecutar las celdas paso a paso
- Cargar los datos desde los archivos CSV.
-- Preprocesar las características y dividir en entrenamiento/prueba.
-- Entrenar modelos de clasificación (Logistic Regression, KNN y Random Forest).
-- Evaluar los modelos con métricas clave (Accuracy, Recall, Precision, F1-Score).
-- Visualizar resultados como matriz de confusión y curva ROC.
+Ejecutar el notebook:
+
+Abrir proyecto_1_parte_final.ipynb con Jupyter Notebook o Jupyter Lab.
+Correr todas las celdas para reproducir el análisis.
+## Créditos
+Este proyecto fue desarrollado por Gonzalo Ferreira como parte del curso de Ciencia de Datos en MITIC.
+
+# Licencia
+Este proyecto está licenciado bajo los términos de la MIT License. Consulta el archivo LICENSE para más detalles.
